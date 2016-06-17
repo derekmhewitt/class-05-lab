@@ -76,8 +76,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 testArray = [2,3,4];
 function sumArray(testArray){
-  sumNumArray = sum(testArray[0],sum(testArray[1],testArray[2])[0])[0];
-  stringArray = testArray.toString() + ' was passed in as an array of numbers, and ' + sumNumArray + ' is their sum.';
+  var sumNumArray = sum(testArray[0],sum(testArray[1],testArray[2])[0])[0];
+  var stringArray = testArray.toString() + ' was passed in as an array of numbers, and ' + sumNumArray + ' is their sum.';
   return [sumNumArray,stringArray];
 }
 
@@ -99,13 +99,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-// // function multiplyArray(testArray) {
-//
-// };
+function multiplyArray(testArray) {
+  var multi2Arrays = multiply(testArray[0],multiply(testArray[1],testArray[2])[0])[0];
+  var stringArray = 'The numbers ' + testArray.toString() + ' have a product of ' + multi2Arrays + '.';
+  return [multi2Arrays,stringArray];
+};
 
 // Here is the test for multiplyArray(); uncomment it to run it
 
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
